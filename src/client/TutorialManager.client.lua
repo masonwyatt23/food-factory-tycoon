@@ -102,7 +102,7 @@ end
 
 -- Tutorial steps
 local steps = {
-	{text = "Welcome to Restaurant Tycoon! Build your food empire!", delay = 0},
+	{text = "Welcome to Food Factory Tycoon! Cook up a fortune!", delay = 0},
 	{text = "Step on the green pads to buy businesses! Your Lemonade Stand was purchased automatically.", delay = 2},
 	{text = "Watch your tips grow! Build the next station when you can afford it.", waitForPurchase = true},
 	{text = "Great job! Keep buying businesses to increase your income. Check out the SHOP for boosts!", delay = 5},
