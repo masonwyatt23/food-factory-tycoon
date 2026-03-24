@@ -33,6 +33,9 @@ local DEFAULT_DATA = {
 	achievements = {},
 	dailyQuests = {},
 	lastQuestReset = 0,
+	ingredientInventory = {},
+	discoveredRecipes = {},
+	recipeBonus = 0,
 }
 
 -- Poll-wait helper: waits for a _G function to be registered by another script

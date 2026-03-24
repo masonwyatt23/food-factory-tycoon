@@ -37,6 +37,14 @@ local function checkAchievements(player)
 			earned = data.rebirthCount >= achievement.threshold
 		elseif achievement.trigger == "totalEarned" then
 			earned = data.totalEarned >= achievement.threshold
+		elseif achievement.trigger == "recipes" then
+			local recipeCount = 0
+			if data.discoveredRecipes then
+				for _ in pairs(data.discoveredRecipes) do
+					recipeCount = recipeCount + 1
+				end
+			end
+			earned = recipeCount >= achievement.threshold
 		end
 
 		if earned then

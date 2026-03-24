@@ -186,6 +186,11 @@ RunService.Heartbeat:Connect(function(dt)
 
 				local income = Utils.getTotalIncome(data.ownedItems, multiplier, GameConfig)
 
+				-- Apply recipe bonus from Recipe Lab
+				if _G.GetRecipeBonus then
+					income = income * _G.GetRecipeBonus(player)
+				end
+
 				if income > 0 then
 					_G.AddCash(player, income)
 				end

@@ -250,6 +250,40 @@ local function createHUD()
 	questsCorner.CornerRadius = UDim.new(0, 8)
 	questsCorner.Parent = questsButton
 
+	-- Recipes button (next to quests)
+	local recipesButton = Instance.new("TextButton")
+	recipesButton.Name = "RecipesButton"
+	recipesButton.Size = UDim2.new(0, 100, 0, 45)
+	recipesButton.Position = UDim2.new(0, 470, 1, -55)
+	recipesButton.BackgroundColor3 = Color3.fromRGB(200, 100, 30)
+	recipesButton.BorderSizePixel = 0
+	recipesButton.Text = "RECIPES"
+	recipesButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	recipesButton.TextSize = 16
+	recipesButton.Font = Enum.Font.GothamBold
+	recipesButton.Parent = screenGui
+
+	local recipesCorner = Instance.new("UICorner")
+	recipesCorner.CornerRadius = UDim.new(0, 8)
+	recipesCorner.Parent = recipesButton
+
+	-- Trade button (next to recipes)
+	local tradeButton = Instance.new("TextButton")
+	tradeButton.Name = "TradeButton"
+	tradeButton.Size = UDim2.new(0, 100, 0, 45)
+	tradeButton.Position = UDim2.new(0, 580, 1, -55)
+	tradeButton.BackgroundColor3 = Color3.fromRGB(50, 150, 150)
+	tradeButton.BorderSizePixel = 0
+	tradeButton.Text = "TRADE"
+	tradeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	tradeButton.TextSize = 16
+	tradeButton.Font = Enum.Font.GothamBold
+	tradeButton.Parent = screenGui
+
+	local tradeCorner = Instance.new("UICorner")
+	tradeCorner.CornerRadius = UDim.new(0, 8)
+	tradeCorner.Parent = tradeButton
+
 	-- Progress bar (below Next Item panel)
 	local progressFrame = Instance.new("Frame")
 	progressFrame.Name = "ProgressBar"
@@ -438,6 +472,28 @@ hud.QuestsButton.MouseButton1Click:Connect(function()
 		end
 	elseif _G.ShowQuestUI then
 		_G.ShowQuestUI()
+	end
+end)
+
+-- Recipes button
+hud.RecipesButton.MouseButton1Click:Connect(function()
+	if _G.PlayButtonClick then _G.PlayButtonClick() end
+	local recipeGui = PlayerGui:FindFirstChild("RecipeGUI")
+	if recipeGui then
+		local frame = recipeGui:FindFirstChild("RecipeFrame")
+		if frame then
+			frame.Visible = not frame.Visible
+		end
+	elseif _G.ShowRecipeUI then
+		_G.ShowRecipeUI()
+	end
+end)
+
+-- Trade button
+hud.TradeButton.MouseButton1Click:Connect(function()
+	if _G.PlayButtonClick then _G.PlayButtonClick() end
+	if _G.ShowTradeUI then
+		_G.ShowTradeUI()
 	end
 end)
 
