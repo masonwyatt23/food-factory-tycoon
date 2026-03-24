@@ -137,6 +137,16 @@ GameConfig.Achievements = {
 	{id = "food_mogul",      name = "Food Mogul",       trigger = "totalEarned", threshold = 10000000, reward = 500000},
 	{id = "apprentice_chef", name = "Apprentice Chef",  trigger = "recipes",     threshold = 5,        reward = 10000},
 	{id = "recipe_master",   name = "Recipe Master",    trigger = "recipes",     threshold = 20,       reward = 500000},
+	-- Building milestones (expanded)
+	{id = "celebrity_chef", name = "Celebrity Chef",     trigger = "items",      threshold = 20,       reward = 200000},
+	{id = "food_chain",     name = "Global Food Chain",  trigger = "items",      threshold = 25,       reward = 500000},
+	{id = "culinary_god",   name = "Culinary Legend",    trigger = "items",      threshold = 28,       reward = 1000000},
+	-- Rebirth milestones (expanded)
+	{id = "prestige_10",    name = "Prestige Master",    trigger = "rebirths",   threshold = 10,       reward = 500000},
+	{id = "prestige_25",    name = "Prestige Legend",    trigger = "rebirths",   threshold = 25,       reward = 5000000},
+	-- Wealth milestones (expanded)
+	{id = "hundred_mil",    name = "100M Tips Club",      trigger = "totalEarned", threshold = 100000000,  reward = 5000000},
+	{id = "tip_billionaire",name = "Tip Billionaire",     trigger = "totalEarned", threshold = 1000000000, reward = 50000000},
 }
 
 -- Recipe Lab: Ingredients
